@@ -1,0 +1,101 @@
+.colorModeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.colorMode {
+  cursor: pointer;
+  margin-left: 15px;
+  margin-right: 40px; /* Adjust as needed */
+}
+
+h5 {
+  margin: 0 10px;
+}
+
+.navLink {
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit; /* Or a specific color for the links */
+}
+
+/* Links within the nav bar */
+.navLinks {
+  color: var(--text-color);
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+  justify-content: flex-end; /* Align items to the right */
+  flex-grow: 1; /* Ensure links take up available space */
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}
+
+[data-theme="light"] {
+  background-color: white;
+  color: black;
+}
+
+[data-theme="dark"] {
+  background-color: black;
+  color: white;
+}
+
+/* Container for the navigation bar */
+.navContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+  z-index: 1000; /* Ensure it's on top of other elements */
+  backdrop-filter: blur(10px);
+  justify-content: flex-end; /* Align nav container to the right */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none; /* Hide links on small screens */
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker background for mobile menu */
+    padding: 20px;
+    z-index: 999; /* Ensure it overlays other content */
+    /* backdrop-filter: blur(10px); Optional: blur background for a frosted glass effect */
+  }
+
+  .navLink {
+    margin: 10px 0; /* More spacing for mobile view */
+  }
+}
+
+.menuIcon {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .menuIcon {
+    display: block;
+    /* Show menu icon on small screens */
+  }
+
+  .navLinks.show {
+    display: flex; /* Show links when menu is open */
+  }
+}

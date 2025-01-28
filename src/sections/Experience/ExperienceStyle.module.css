@@ -1,0 +1,101 @@
+/* Container for the experience section */
+.experienceContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--background-colour); /* Set the background color for the container */
+}
+
+.sectionHeadText {
+  font-size: 36px;
+  color: var(--text-color);
+}
+
+.titlecontainer {
+  position: relative;
+  text-align: left;
+  margin-top: 50px; /* Adjust as needed */
+}
+
+.largertitle {
+  color: var(--text-color);
+  font-size: 10rem; /* Adjust size as needed */
+  color: var(--fade-color); /* Light gray with transparency */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -68%);
+  white-space: nowrap;
+  z-index: 1;
+  text-transform: none;
+}
+
+.smallertitle {
+  font-size: 4rem; /* Adjust size as needed */
+  color: var(--text-color);
+  position: relative;
+  z-index: 2;
+}
+
+/* Table styles */
+.tableWrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+  overflow-x: auto; /* Allow horizontal scrolling on small screens */
+}
+
+.experienceTable {
+  width: 100%;
+  border-collapse: collapse; /* Collapse borders */
+  margin-top: 20px; /* Space above the table */
+}
+
+.experienceTable th, .experienceTable td {
+  padding: 15px; /* Increased padding for better spacing */
+  text-align: left;
+  border: none; /* Remove borders */
+}
+
+.experienceTable th {
+  background-color: var(--fade-color); /* Adjust header background color */
+  color: var(--text-color);
+  font-weight: bold; /* Make header text bold */
+}
+
+.experienceTable tr {
+  background-color: var(--background-colour); /* Solid background for all rows */
+}
+
+.experienceTable tr:hover {
+  background-color: var(--background-colour); /* Keep the background color the same on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  .icon {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  .iconWrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: inherit;
+  }
+  .verticalTimelineWrapper {
+    max-width: 800px;
+    margin-top: 0px;
+  }
+  .navLinks.show {
+    display: flex; /* Show links when menu is open */
+  }
+}

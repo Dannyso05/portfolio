@@ -1,0 +1,146 @@
+
+ .aboutMeSection {
+  color: var(--text-color);
+
+}
+
+.titlecontainer {
+  position: relative;
+  text-align: center;
+  text-align: center;
+  margin-top: 50px; /* Adjust as needed */
+
+}
+
+.largertitle {
+  color: var(--text-color);
+
+  font-size: 10rem; /* Adjust size as needed */
+  color: var(--fade-color); /* Light gray with transparency */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -68%);
+  white-space: nowrap;
+  z-index: 1;
+  text-transform: none;
+
+}
+.smallertitle {
+  font-size: 4rem; /* Adjust size as needed */
+  color: var(--text-color);
+  position: relative;
+  z-index: 2;
+}
+
+
+.contentContainer {
+  padding: 0px 250px;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-top: 100px;
+}
+
+.profilePicture {
+  width: 150px;
+  height: 270px;
+  border-radius: 10px;
+  object-fit: cover; /* Better fit for images */
+}
+
+.textContent {
+  flex: 1;
+}
+
+.aboutText {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.educationButton {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-color);
+  border: 2px solid var(--text-color);
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  width: 600px; /* Set a specific width */
+  transition: all 0.3s ease;
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.educationButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.schoolLogo {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.buttonText {
+  text-align: left;
+  flex: 1; /* Allow text to fill remaining space */
+}
+
+.buttonText p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.buttonText p:first-child {
+  font-weight: bold;
+}
+
+@media (max-width: 800px) {
+  .aboutMeSection {
+    padding: 30px 10px; /* Adjusted padding */
+  }
+
+  .sectionTitle {
+    font-size: 2rem; /* Reduced font size */
+    margin-bottom: 20px; /* Reduced margin */
+  }
+
+
+  .contentContainer {
+    flex-direction: row; /* Stack content vertically */
+    align-items: center; /* Center-align content */
+    gap: 10px; /* Reduced gap */
+    margin-top: 125px;
+    margin-bottom: 25px;
+  }
+
+  .profilePicture {
+    width: 100px; /* Reduced width */
+    height: 180px; /* Reduced height */
+  }
+
+  .educationButton {
+    width: 100%; /* Full width */
+    max-width: none; /* Remove maximum width restriction */
+  }
+
+  .schoolLogo {
+    width: 30px; /* Reduced size */
+    height: 30px; /* Reduced size */
+    margin-bottom: 10px; /* Margin below logo */
+  }
+  .aboutText {
+    font-size: 12px;
+  }
+  .buttonText {
+
+    text-align: center; /* Center-align text content */
+  }
+  .buttonText p{
+    font-size: 12px;
+
+  }
+}
+
+  

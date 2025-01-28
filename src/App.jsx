@@ -35,10 +35,7 @@ function App() {
       <section id="Experience" className='element'>
         <Experience/>
       </section>
-      <div className="section-divider"></div>
-      <section id="Projects" className='element'>
-        <Projects/>
-      </section>
+  
       <div className="section-divider"></div>
       <section id="Contacts" className='element'>
         <Contacts/>

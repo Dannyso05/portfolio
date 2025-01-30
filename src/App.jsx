@@ -5,6 +5,7 @@ import AboutMe from './sections/AboutMe/AboutMe';
 import Experience from './sections/Experience/Experience';
 import Projects from './sections/Projects/Projects';
 import Contacts  from './sections/Contacts/Contacts';
+import Footer from './sections/Footer/footer';
 import { useEffect } from 'react';
 
 function App() {
@@ -40,7 +41,10 @@ function App() {
       <section id="Contacts" className='element'>
         <Contacts/>
       </section>
-      <div className='footer'></div>
+
+      <div className='footer'>
+        <Footer/>
+      </div>
       <Nav/>
     </>
   );

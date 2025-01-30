@@ -37,20 +37,25 @@
 .contentContainer {
   padding: 0px 250px;
   display: flex;
-  align-items: flex-start;
+  align-items: center; /* Center-align items vertically */
   gap: 30px;
-  margin-top: 100px;
+  margin-top: 50px;
+  position: relative; /* Added to position text content absolutely */
+  padding-bottom: 100px;
+
 }
 
 .profilePicture {
   width: 150px;
-  height: 270px;
+  height: 240px; /* Reduced height to cut off the bottom portion */
   border-radius: 10px;
   object-fit: cover; /* Better fit for images */
 }
 
 .textContent {
   flex: 1;
+  position: relative; /* Change to relative */
+  top: 50%; /* Center vertically */
 }
 
 .aboutText {
@@ -67,7 +72,7 @@
   border-radius: 10px;
   padding: 10px;
   cursor: pointer;
-  width: 600px; /* Set a specific width */
+  width: 100%; /* Set a specific width */
   transition: all 0.3s ease;
   box-sizing: border-box; /* Ensure padding and border are included in width */
 }

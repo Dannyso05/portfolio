@@ -135,10 +135,10 @@ import Canada from "../../assets/environment-canada-logo-partners.jpg"
 const experiences = [
   {
     date: 'January 2025 - April 2025',
-    title: 'Data Scientist',
-    company_name: 'Enviornment and Climate Change Canada',
+    title: 'Data Scientist Intern',
+    company_name: 'ECCC',
     content: [
-      'Incoming Winter 2025 Intern at Air Quality Team'
+      'Developed and automated testing frameworks for air quality prediction models, enhancing reliability in production. Automated scripts for calculating key air quality metrics, streamlining workflows and minimizing manual effort. Contributed to the development and optimization of prediction models such as Random Forest and Gradient Boosting, and designed Power BI dashboards for Air Quality Health Index (AQHI) reporting.'
     ],
     icon: Canada,
     iconBg: '#fff',
@@ -148,32 +148,71 @@ const experiences = [
     title: 'AI Software Engineer (Contract)',
     company_name: 'RemitBee',
     content: [
-      'Lead the deployment of scalable AI/ML model training pipelines, enhancing efficiency and optimizing end-to-end workflows.'
+      'Led the development of AI/ML projects using Python, Java, and JavaScript, securing funding for project scaling. Analyzed customer interaction data to improve chatbot decision-making and enhance user satisfaction. Managed a team of four interns, guiding algorithm selection and training, and improving project performance while reducing computational costs.'
     ],
     icon: Remitbee,
     iconBg: '#fff',
   },
   {
     date: 'June 2024 - September 2024',
-    title: 'AI Software Engineer',
+    title: 'AI Software Engineer Intern',
     company_name: 'RemitBee',
     content: [
-      'Developed AI/ML solutions, including an AI-powered customer service chatbot, a fraudulent transaction detection system, and a predictive model for customer churn mitigation.'
+      ' Developed transaction fraud detection and currency rate forecasting models, providing real-time insights for daily transactions. Streamlined customer service workflows by implementing a Retrieval-Augmented Generation (RAG) pipeline with LangChain, reducing reliance on human agents. Enhanced chatbot performance using advanced NLP techniques like semantic search and re-ranking.'
     ],
     icon: Remitbee,
     iconBg: '#fff',
   },
   {
     date: 'Jan 2024 - June 2024',
-    title: 'Data Engineer',
+    title: 'Data Engineer Intern',
     company_name: 'Countable',
     content: [
-      'Implemented robust data pipelines to aggregate and process Alberta government bill data, ensuring high accessibility for analytical purposes.'
+      'Developed scalable data pipelines using Python and Gen AI to improve data extraction and loading speeds. Automated data extraction processes with tools like BeautifulSoup4 and Selenium, boosting accuracy and reducing manual effort. Deployed solutions on Azure Cloud, optimizing resource management and lowering operational costs.'
     ],
     icon: Countable,
     iconBg: '#fff',
   },
 ];
+
+// const Experience = () => {
+//   return (
+//     <section id="Experience" className={styles.experienceContainer}>
+//       <div className={styles.title}>
+//         <div className={styles.titlecontainer}>
+//           <h1 className={styles.largertitle}>Experience</h1>
+//           <h3 className={styles.smallertitle}>Experience</h3>
+//         </div>
+//       </div>
+
+//       <div className={styles.tableWrapper}>
+//         <table className={styles.experienceTable}>
+//           <thead>
+//             <tr>
+           
+//             </tr>
+//           </thead>
+//           <tbody>
+//   {experiences.map((experience, index) => (
+//     <tr key={`experience-${index}`}>
+//       <td className={styles.jobTitle}>
+//       <span className={styles.date}>{experience.date} | {experience.company_name}</span> <br />
+//         {experience.title} 
+//         {/* Ensure this span has the 'date' class */}
+//       </td>
+//       <td className={styles.otherInfo}>{experience.content}</td>
+//     </tr>
+//   ))}
+// </tbody>
+//         </table>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Experience;
+
+
 
 const Experience = () => {
   return (
@@ -181,22 +220,31 @@ const Experience = () => {
       <div className={styles.title}>
         <div className={styles.titlecontainer}>
           <h1 className={styles.largertitle}>Experience</h1>
-          <h3 className={styles.smallertitle}>Experience</h3>
+          <h3 className={styles.smallertitle}>Experience.</h3>
         </div>
       </div>
 
       <div className={styles.tableWrapper}>
+
         <table className={styles.experienceTable}>
           <thead>
             <tr>
-           
+              <th className={styles.jobTitleColumn}></th>
+              <th className={styles.descriptionColumn}></th>
             </tr>
           </thead>
           <tbody>
             {experiences.map((experience, index) => (
               <tr key={`experience-${index}`}>
-                <td>{experience.title} <br /> {experience.date}</td>
-                <td>{experience.content}</td>
+                <td className={styles.jobTitle}>
+                  <span className={styles.date}>{experience.date} | {experience.company_name}</span> <br />
+                  {experience.title}
+                </td>
+                <td className={styles.otherInfo}>
+                  {experience.content.map((line, index) => (
+                    <div key={index}>{line}</div>
+                  ))}
+                </td>
               </tr>
             ))}
           </tbody>

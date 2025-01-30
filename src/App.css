@@ -223,10 +223,10 @@ cursor: pointer;
 .section-divider {
   width: 20%;
   height: 3px;
-  background-color: #72ade8; /* Dodger Blue */
+  background-color: rgba(79, 146, 169, 0.85); /* Dodger Blue */
   fill-opacity: 50%;
-  margin: 10px auto;
-  margin-top: 100px;
+  margin: 0px auto;
+  margin-top: 0px;
 }
 
 h1 {

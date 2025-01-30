@@ -1,10 +1,12 @@
+/* src/sections/Experience/ExperienceStyle.module.css */
+
 /* Container for the experience section */
 .experienceContainer {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding-bottom: 50px;
   background-color: var(--background-colour); /* Set the background color for the container */
 }
 
@@ -19,10 +21,10 @@
   margin-top: 50px; /* Adjust as needed */
 }
 
+/* Title styles */
 .largertitle {
-  color: var(--text-color);
-  font-size: 10rem; /* Adjust size as needed */
   color: var(--fade-color); /* Light gray with transparency */
+  font-size: 10rem; /* Adjust size as needed */
   position: absolute;
   top: 50%;
   left: 50%;
@@ -42,29 +44,62 @@
 /* Table styles */
 .tableWrapper {
   width: 100%;
-  max-width: 1200px;
-  margin-top: 20px;
-  overflow-x: auto; /* Allow horizontal scrolling on small screens */
+  max-width: 1000px;
+  margin: 40px 10px; /* Increased left and right margin */
+  overflow-x: auto; /* Allow horizontal scrolling only when necessary */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+  padding-bottom: 0px;
 }
 
 .experienceTable {
   width: 100%;
   border-collapse: collapse; /* Collapse borders */
   margin-top: 20px; /* Space above the table */
+  table-layout: fixed; /* Keep the columns fixed to prevent overflow */
+}
+
+@font-face {
+  font-family: Raleway;
+  src: url('../../../public/Raleway-VariableFont_wght.ttf');
 }
 
 .experienceTable th, .experienceTable td {
-  padding: 15px; /* Increased padding for better spacing */
+  padding: 15px; /* Unified padding for better spacing */
   text-align: left;
   border: none; /* Remove borders */
+  background-color: transparent; /* Set header background to transparent */
+
+  vertical-align: top; /* Align content at the top */
 }
 
 .experienceTable th {
-  background-color: var(--fade-color); /* Adjust header background color */
   color: var(--text-color);
   font-weight: bold; /* Make header text bold */
 }
 
+.experienceTable .jobTitle {
+  font-size: 25px; /* Job title size */
+  font-weight: bold; /* Make job title bold */
+  font-family: Raleway;
+}
+
+.experienceTable .date {
+  font-size: 12px; /* Smaller size for date */
+  font-family: Raleway;
+  color: var(--text-color); /* Ensure text color is consistent */
+  padding-bottom: 10px;
+}
+
+.experienceTable .otherInfo {
+  font-size: 16px; /* Smaller size for date */
+  font-family: Raleway;
+  color: var(--text-color); /* Ensure text color is consistent */
+  word-wrap: break-word; /* Ensure text wraps inside the cell */
+  line-height: 1.5; /* Increased line height for better spacing between lines */
+  padding-bottom: 25px;
+}
+
+/* Row styles */
 .experienceTable tr {
   background-color: var(--background-colour); /* Solid background for all rows */
 }
@@ -73,15 +108,23 @@
   background-color: var(--background-colour); /* Keep the background color the same on hover */
 }
 
+/* Column styles */
+.jobTitleColumn {
+  width: 30%;  
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+
+.descriptionColumn {
+  
+  width: 70%;  
+  word-wrap: break-word;
+}
+
 /* Responsive adjustments */
 @media (max-width: 800px) {
-  .icon {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  .iconWrapper {
+  .icon, .iconWrapper {
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -89,12 +132,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: inherit;
   }
+
   .verticalTimelineWrapper {
     max-width: 800px;
     margin-top: 0px;
   }
+
   .navLinks.show {
     display: flex; /* Show links when menu is open */
   }

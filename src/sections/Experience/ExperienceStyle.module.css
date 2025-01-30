@@ -142,4 +142,89 @@
   .navLinks.show {
     display: flex; /* Show links when menu is open */
   }
+  .jobTitleColumn {
+    width: 100%; /* Full width for mobile */
+    white-space: normal; /* Allow wrapping */
+  }
+
+  
+}
+
+
+/* this */
+
+/* src/sections/Experience/ExperienceStyle.module.css */
+
+/* Container for the experience section */
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  .titlecontainer {
+    margin-top: 30px; /* Adjust margin for mobile */
+    padding-right: 0px;
+  }
+
+  .largertitle {
+    font-size: 5rem; /* Reduced font size for mobile */
+    white-space: normal; /* Allow wrapping on mobile */
+  }
+
+  .smallertitle {
+    font-size: 2rem; /* Reduced font size for mobile */
+  }
+
+  .tableWrapper {
+    margin: 20px 5px; /* Adjusted margins for mobile */
+  }
+
+  .experienceTable th, .experienceTable td {
+    padding: 10px; /* Reduced padding for mobile */
+    align-items: center; /* Center inline elements within the parent */
+
+  }
+
+  .experienceTable .jobTitle {
+    font-size: 20px; /* Adjust job title size for mobile */
+    display: flex; /* Use flexbox for stacking */
+    flex-direction: column; /* Stack title and date vertically */
+    
+  }
+
+  .experienceTable .otherInfo {
+    font-size: 14px; /* Adjust description size for mobile */
+    margin-right: 0px;
+  }
+
+  .experienceTable .date {
+    font-size: 10px; /* Adjust date size for mobile */
+  }
+
+  .experienceTable {
+    width: 100%;
+    
+  }
+
+  .experienceTable th, .experienceTable td {
+    padding: 0px; /* Unified padding for better spacing */
+  }
+
+  .tableWrapper {
+    width: 100%;
+    max-width: 600px;
+    margin: 0px; /* Increased left and right margin */
+    padding-right: 0px;
+    align-items: center;
+  }
+
+  .jobTitleColumn {
+    width: 70%;  
+
+  }
+  
+  .descriptionColumn {
+    
+    width: 30%;  
+    word-wrap: break-word;
+  }
+  
 }

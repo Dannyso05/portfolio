@@ -174,12 +174,13 @@
   }
 
   .tableWrapper {
-    margin: 20px 5px; /* Adjusted margins for mobile */
+    margin: 0px; /* Adjusted margins for mobile */
   }
 
   .experienceTable th, .experienceTable td {
-    padding: 10px; /* Reduced padding for mobile */
+    /* padding: 10px; Reduced padding for mobile */
     align-items: center; /* Center inline elements within the parent */
+    width: 80%;
 
   }
 
@@ -187,11 +188,10 @@
     font-size: 20px; /* Adjust job title size for mobile */
     display: flex; /* Use flexbox for stacking */
     flex-direction: column; /* Stack title and date vertically */
-    
   }
 
   .experienceTable .otherInfo {
-    font-size: 14px; /* Adjust description size for mobile */
+    font-size: 10px; /* Adjust description size for mobile */
     margin-right: 0px;
   }
 
@@ -209,22 +209,29 @@
   }
 
   .tableWrapper {
-    width: 100%;
-    max-width: 600px;
+    width: 80%;
+    max-width: 300px;
     margin: 0px; /* Increased left and right margin */
     padding-right: 0px;
     align-items: center;
   }
 
   .jobTitleColumn {
-    width: 70%;  
-
+    width: 30%;  
+    max-width: 10px;
   }
   
   .descriptionColumn {
-    
-    width: 30%;  
+    width: 50%;  
     word-wrap: break-word;
   }
-  
+  .experienceContainer {
+    position: static;
+    display: flex;
+    width: 80%;
+    padding: 0px;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-colour); /* Set the background color for the container */
+  }
 }

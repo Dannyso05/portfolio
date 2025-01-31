@@ -78,7 +78,7 @@ h5 {
   }
 
   .navLink {
-    margin: 10px 0; /* More spacing for mobile view */
+    margin: 5px 0; /* More spacing for mobile view */
   }
 }
 
@@ -100,9 +100,15 @@ h5 {
 
   .navContainer {
 
-    padding:0px
+    padding-left: 5px
   }
   .navLinks.show {
     display: flex; /* Show links when menu is open */
   }
+
+  .colorMode {
+
+    margin-right: 10px; /* Adjust as needed */
+  }
+  
 }

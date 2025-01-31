@@ -217,7 +217,7 @@ cursor: pointer;
 
 @media (width >= 800px) {
   #root {
-  gap: 100px;
+  gap: 0px;
 }
 
 .section-divider {
@@ -244,6 +244,8 @@ p {
 
 .element {
   padding-top: 100px;
+  padding-right: 0px;
+  width: 80%;
 }
 
 .sectionTitle {

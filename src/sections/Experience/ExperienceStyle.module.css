@@ -134,11 +134,6 @@
     align-items: center;
   }
 
-  .verticalTimelineWrapper {
-    max-width: 800px;
-    margin-top: 0px;
-  }
-
   .navLinks.show {
     display: flex; /* Show links when menu is open */
   }
@@ -201,7 +196,7 @@
 
   .experienceTable {
     width: 100%;
-    
+    padding-left: 100px;
   }
 
   .experienceTable th, .experienceTable td {
@@ -228,7 +223,7 @@
   .experienceContainer {
     position: static;
     display: flex;
-    width: 80%;
+    width: 100%;
     padding: 0px;
     flex-direction: column;
     align-items: center;

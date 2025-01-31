@@ -179,7 +179,7 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .carouselContainer {
-    width: 60%; /* Increase width for smaller screens */
+    width: 80%; /* Increase width for smaller screens */
   }
 
   .card {

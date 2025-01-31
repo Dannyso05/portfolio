@@ -92,9 +92,16 @@ h5 {
 @media (max-width: 768px) {
   .menuIcon {
     display: block;
+    margin-right: 0px;
+    padding-right: 0px;
+
     /* Show menu icon on small screens */
   }
 
+  .navContainer {
+
+    padding:0px
+  }
   .navLinks.show {
     display: flex; /* Show links when menu is open */
   }

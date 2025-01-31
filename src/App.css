@@ -12,6 +12,8 @@
 
 .element {
 padding-top: 75px;
+width: 100%;
+
 }
 
 .contcont {
@@ -245,7 +247,7 @@ p {
 .element {
   padding-top: 100px;
   padding-right: 0px;
-  width: 80%;
+  width: 100%;
 }
 
 .sectionTitle {

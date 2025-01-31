@@ -1,5 +1,5 @@
 .carouselContainer {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   
   padding-bottom: 100px;
@@ -90,7 +90,7 @@
 /* src/sections/Projects/ProjectsStyle.module.css */
 
 .carouselContainer {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   padding-bottom: 100px;
 }
@@ -179,7 +179,7 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .carouselContainer {
-    width: 90%; /* Increase width for smaller screens */
+    width: 60%; /* Increase width for smaller screens */
   }
 
   .card {

@@ -175,7 +175,7 @@
   .experienceTable th, .experienceTable td {
     /* padding: 10px; Reduced padding for mobile */
     align-items: center; /* Center inline elements within the parent */
-    width: 80%;
+    width: 100%;
 
   }
 
@@ -204,7 +204,7 @@
   }
 
   .tableWrapper {
-    width: 80%;
+    width: 100%;
     max-width: 300px;
     margin: 0px; /* Increased left and right margin */
     padding-right: 0px;
@@ -217,7 +217,7 @@
   }
   
   .descriptionColumn {
-    width: 50%;  
+    width: 70%;  
     word-wrap: break-word;
   }
   .experienceContainer {

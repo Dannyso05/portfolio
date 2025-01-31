@@ -226,6 +226,8 @@
     padding: 0px;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 50px;
+
     background-color: var(--background-colour); /* Set the background color for the container */
   }
 

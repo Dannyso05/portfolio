@@ -180,6 +180,7 @@
 @media (max-width: 768px) {
   .carouselContainer {
     width: 80%; /* Increase width for smaller screens */
+    padding-bottom: 50px;
   }
 
   .card {

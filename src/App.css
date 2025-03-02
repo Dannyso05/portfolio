@@ -55,6 +55,7 @@ padding: 0;
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  font-family: "Raleway", sans-serif; /* Apply Raleway font to the entire body */
   transition: background-color 0.3s, color 0.3s; /* Smooth transition */
   margin: 0; /* Remove default margin */
   padding: 0; /* Remove default padding */
@@ -75,7 +76,7 @@ body {
   height: 100%;
   z-index: -1; /* Place behind other content */
   overflow: visible;
-  pointer-events: none; /* Ensure it doesn’t interfere with clicks */
+  pointer-events: none; /* Ensure it doesn't interfere with clicks */
 }
 
 /* Smudged Paint Effect */
@@ -146,7 +147,7 @@ body {
   border-radius: 50%;
   transform: translate(-50%, -50%);
   z-index: -1; /* Ensure it's behind the bubble itself */
-  pointer-events: none; /* Make sure it doesn’t interfere with clicks */
+  pointer-events: none; /* Make sure it doesn't interfere with clicks */
 }
 
 /* Adjust gradient colors to match bubble colors and ensure smooth transition */
@@ -205,7 +206,7 @@ cursor: pointer;
 .section-divider {
   width: 20%;
   height: 3px;
-  background-color: #72ade8; /* Dodger Blue */
+  background-color: rgba(114, 173, 232, 0.5); /* Dodger Blue with 50% opacity */
   margin: 100px auto;
   margin-bottom: 0px;
 }
@@ -223,7 +224,7 @@ cursor: pointer;
 .section-divider {
   width: 20%;
   height: 3px;
-  background-color: #72ade8; /* Dodger Blue */
+  background-color: rgba(114, 173, 232, 0.5); /* Dodger Blue with 50% opacity */
   fill-opacity: 50%;
   margin: 10px auto;
   margin-top: 100px;

@@ -1,0 +1,22 @@
+body {
+  font-family: "Raleway", sans-serif; /* Apply Raleway font to the entire body */
+  font-optical-sizing: auto;
+  font-weight: 400; /* Default weight, adjust as needed */
+}
+
+button {
+  font-family: "Raleway", sans-serif; /* Apply Raleway font to buttons */
+  font-optical-sizing: auto;
+  font-weight: 600; /* Adjust button weight as needed */
+}
+
+/* Example of a unique class for specific weights */
+.raleway-light {
+  font-family: "Raleway", sans-serif;
+  font-weight: 300; /* Light weight */
+}
+
+.raleway-bold {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700; /* Bold weight */
+}

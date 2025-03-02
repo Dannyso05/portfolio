@@ -20,6 +20,7 @@ h5 {
   text-decoration: none;
   font-weight: bold;
   color: inherit; /* Or a specific color for the links */
+  font-family: "Raleway", sans-serif; /* Apply Raleway font */
 }
 
 /* Links within the nav bar */
@@ -87,6 +88,7 @@ h5 {
   cursor: pointer;
   font-size: 24px;
   margin-right: 20px;
+  padding-left: 10px;
 }
 
 @media (max-width: 768px) {

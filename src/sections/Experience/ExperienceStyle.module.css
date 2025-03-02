@@ -5,7 +5,9 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  /* max-width: 900px; */
   background-color: var(--background-colour); /* Set the background color for the container */
+  font-family: "Raleway", sans-serif; /* Apply Raleway font */
 }
 
 .sectionHeadText {

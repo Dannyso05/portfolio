@@ -1,20 +1,19 @@
-
- .aboutMeSection {
+.aboutMeSection {
   color: var(--text-color);
-
+  font-family: "Raleway", sans-serif; /* Apply Raleway font */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .titlecontainer {
   position: relative;
   text-align: center;
-  text-align: center;
   margin-top: 50px; /* Adjust as needed */
-
 }
 
 .largertitle {
-  color: var(--text-color);
-
   font-size: 10rem; /* Adjust size as needed */
   color: var(--fade-color); /* Light gray with transparency */
   position: absolute;
@@ -24,8 +23,8 @@
   white-space: nowrap;
   z-index: 1;
   text-transform: none;
-
 }
+
 .smallertitle {
   font-size: 4rem; /* Adjust size as needed */
   color: var(--text-color);
@@ -33,24 +32,37 @@
   z-index: 2;
 }
 
-
 .contentContainer {
-  padding: 0px 250px;
+  padding: 0 250px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 30px;
-  margin-top: 100px;
+  margin-top: 50px;
+  max-width: 900px;
+  width: 100%; /* Ensure it takes full width */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.profilePictureContainer {
+  flex: 0 0 135px; /* Don't grow, don't shrink, start at 135px */
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
 
 .profilePicture {
-  width: 150px;
-  height: 270px;
-  border-radius: 10px;
-  object-fit: cover; /* Better fit for images */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
 .textContent {
-  flex: 1;
+  flex: 1; /* Take up remaining space */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .aboutText {
@@ -106,20 +118,20 @@
     margin-bottom: 20px; /* Reduced margin */
   }
 
-
   .contentContainer {
-    flex-direction: row; /* Stack content vertically */
-    align-items: center; /* Center-align content */
+    flex-direction: row; /* Keep as row on mobile */
+    align-items: center;
     gap: 10px; /* Reduced gap */
+    padding: 0 20px; /* Reduced padding */
     margin-top: 125px;
     margin-bottom: 25px;
   }
 
-  .profilePicture {
-    width: 100px; /* Reduced width */
-    height: 180px; /* Reduced height */
+  .profilePictureContainer {
+    flex: 0 0 100px; /* Smaller fixed width on mobile */
+    height: 180px;
   }
-
+  
   .educationButton {
     width: 100%; /* Full width */
     max-width: none; /* Remove maximum width restriction */
@@ -130,17 +142,16 @@
     height: 30px; /* Reduced size */
     margin-bottom: 10px; /* Margin below logo */
   }
+  
   .aboutText {
     font-size: 12px;
   }
+  
   .buttonText {
-
     text-align: center; /* Center-align text content */
   }
-  .buttonText p{
+  
+  .buttonText p {
     font-size: 12px;
-
   }
 }
-
-  

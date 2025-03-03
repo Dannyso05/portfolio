@@ -35,15 +35,14 @@ function App() {
       <section id="Experience" className='element'>
         <Experience/>
       </section>
-      <div className="section-divider"></div>
-      <section id="Projects" className='element'>
-        <Projects/>
-      </section>
+    
       <div className="section-divider"></div>
       <section id="Contacts" className='element'>
         <Contacts/>
       </section>
-      <div className='footer'></div>
+      <div className="section-divider"></div>
+
+      <div className='footer'>@ 2025 Daniel Hyeongseok Song</div>
       <Nav/>
     </>
   );

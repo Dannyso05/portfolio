@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
   /* max-width: 900px; */
   background-color: var(--background-colour); /* Set the background color for the container */
   font-family: "Raleway", sans-serif; /* Apply Raleway font */
@@ -17,8 +16,8 @@
 
 .titlecontainer {
   position: relative;
-  text-align: left;
-  margin-top: 50px; /* Adjust as needed */
+  text-align: center;
+  margin-top: 100px; /* Adjust as needed */
 }
 
 .largertitle {
@@ -28,14 +27,16 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -68%);
+  transform: translate(-50%, -71%);
   white-space: nowrap;
   z-index: 1;
   text-transform: none;
 }
 
 .smallertitle {
-  font-size: 4rem; /* Adjust size as needed */
+  left: 3%;
+
+  font-size: 3rem; /* Adjust size as needed */
   color: var(--text-color);
   position: relative;
   z-index: 2;
@@ -44,21 +45,33 @@
 /* Table styles */
 .tableWrapper {
   width: 100%;
-  max-width: 1200px;
-  margin-top: 20px;
+  max-width: 1000px;
+  margin-top: 50px;
   overflow-x: auto; /* Allow horizontal scrolling on small screens */
 }
 
 .experienceTable {
   width: 100%;
   border-collapse: collapse; /* Collapse borders */
-  margin-top: 20px; /* Space above the table */
+  margin-top: 50px; /* Space above the table */
+}
+
+.firstColumn {
+  padding: 20px; /* Increase padding for better spacing */
+  text-align: left; /* Align text to the left */
+  width: 250px; /* Set a fixed width for the first column */
 }
 
 .experienceTable th, .experienceTable td {
+
   padding: 15px; /* Increased padding for better spacing */
+  padding-bottom: 50px;
   text-align: left;
   border: none; /* Remove borders */
+}
+
+.experienceTable .th .firstColumn {
+  padding-right: 100px;
 }
 
 .experienceTable th {
@@ -73,6 +86,28 @@
 
 .experienceTable tr:hover {
   background-color: var(--background-colour); /* Keep the background color the same on hover */
+}
+
+
+
+.carouselControls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.carouselButton {
+  padding: 10px 20px;
+  background-color: var(--text-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carouselButton:hover {
+  background-color: var(--fade-color);
 }
 
 /* Responsive adjustments */
@@ -100,4 +135,14 @@
   .navLinks.show {
     display: flex; /* Show links when menu is open */
   }
+}
+
+.smallFont {
+  font-size: 0.8rem; /* Adjust the size as needed */
+  color: var(--text-color); /* Use the variable for text color */
+}
+
+.bigFont {
+  font-size: 1.5rem; /* Adjust the size as needed */
+  color: var(--text-color); /* Use the variable for text color */
 }

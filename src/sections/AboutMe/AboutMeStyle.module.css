@@ -10,7 +10,7 @@
 .titlecontainer {
   position: relative;
   text-align: center;
-  margin-top: 50px; /* Adjust as needed */
+  margin-top: 100px; /* Adjust as needed for more space on top */
 }
 
 .largertitle {
@@ -19,14 +19,14 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -68%);
+  transform: translate(-50%, -71%);
   white-space: nowrap;
   z-index: 1;
   text-transform: none;
 }
 
 .smallertitle {
-  font-size: 4rem; /* Adjust size as needed */
+  font-size: 3rem; /* Adjust size as needed */
   color: var(--text-color);
   position: relative;
   z-index: 2;
@@ -48,7 +48,7 @@
   height: 200px;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--shadow-color); /* Simple white border */
 }
 
 .profilePicture {

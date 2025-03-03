@@ -1,72 +1,67 @@
-.carouselContainer {
-  width: 80%;
-  margin: 0 auto;
+.projectContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  /* max-width: 900px; */
+  background-color: var(--background-colour); /* Set the background color for the container */
+  font-family: "Raleway", sans-serif; /* Apply Raleway font */
 }
 
-.cardWrapper {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  display: flex;
+.carouselContainer {
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
   width: 100%;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* For Firefox */
+  cursor: grab; /* Change cursor to indicate draggable area */
+}
+
+.carouselContainer:active {
+  cursor: grabbing; /* Change cursor when dragging */
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth transition */
 }
 
 .card {
   position: relative;
-  overflow: hidden; /* Ensures the overlay stays within the card */
-  height: 450px;
-  width: 300%; /* Ensure it takes full width */
-  color: #fff;
-  margin: 0 15px; /* Creates horizontal gaps between the cards */
+  width: 300px; /* Width of each card */
+  height: 400px; /* Height of each card */
+  margin: 5px 15px; /* Space between cards */
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border: 2px solid var(--text-color); /* Adds a colored border */
-  transition: transform 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Raleway", sans-serif; /* Apply Raleway font */
+  overflow: hidden;
+  transition: transform 0.5s; /* Smooth rotation */
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Scale on hover */
   z-index: 1; /* Bring the hovered card to the front */
 }
 
 .image {
   width: 100%; /* Make the image cover the entire card */
   height: 100%; /* Ensure it covers the height */
-  object-fit:fill; /* Cover the entire card without distortion */
-}
-
-.overlay {
-  position: absolute; /* Position the overlay absolutely within the card */
-  top: 0;
-  left: 0;
-  width: 100%; /* Cover the full width of the card */
-  height: 100%; /* Cover the full height of the card */
-  background: linear-gradient(to top, var(--background-color), var(--grad-color)); /* Gradient background */
-  display: flex;
-  flex-direction: column; /* Stack title, description, and button vertically */
-  justify-content: center; /* Center them vertically */
-  align-items: center; /* Center them horizontally */
-  opacity: 0; /* Start as invisible */
-  transition: opacity 0.3s ease; /* Smooth transition for opacity */
-}
-
-.card:hover .overlay {
-  opacity: 1; /* Show the overlay on hover */
+  object-fit: cover; /* Cover the entire card without distortion */
 }
 
 .title {
-  font-size: 2em; /* Adjust as needed for the title size */
+  font-size: 1em; /* Adjust as needed for the title size */
   margin-bottom: 10px; /* Adds space below the title */
   text-align: center; /* Center align the title text */
+  color: var(--text-color); /* Use variable for title color */
 }
 
 .description {
   font-size: 1em; /* Adjust as needed for the description size */
   text-align: center; /* Center align the description text */
   padding: 0 10px; /* Optional: add some padding */
+  color: var(--text-color); /* Use variable for description color */
 }
 
 .button {
@@ -81,4 +76,63 @@
 
 .button:hover {
   background-color: #0000FF; /* Change button color on hover */
+}
+
+.titlecontainer {
+  position: relative;
+  text-align: left;
+  margin-left: 150px;
+  margin-bottom: 50px;
+  margin-top: 100px;
+}
+
+.largertitle {
+  font-size: 10rem;
+  color: var(--fade-color); 
+  position: absolute;
+  top: 50%;
+  left: 23.2%;
+  transform: translate(-50%, -71%);
+  white-space: nowrap;
+  z-index: 1;
+  text-transform: None;
+}
+
+.smallertitle {
+  font-size: 3rem; /* Adjust size as needed */
+  color: var(--text-color);
+  position: relative;
+  z-index: 2;
+}
+
+.cardHolder {
+  position: relative; /* Ensure the card holder is positioned relative */
+  margin: 0 15px; /* Space between cards */
+}
+
+.descriptionContainer {
+  position: absolute; /* Position the description absolutely */
+  bottom: 10px; /* Adjust as needed to position above the bottom */
+  left: 0;
+  right: 0; /* Stretch across the card */
+  text-align: center; /* Center align the text */
+  z-index: 10; /* Ensure it appears above the card */
+  opacity: 0; /* Start as invisible */
+  transition: opacity 0.3s ease; /* Smooth transition for opacity */
+  pointer-events: none; /* Allow pointer events to pass through */
+  /* background: linear-gradient(to top, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));  */
+  background: var(--lightbg); /* Use variable for background */
+  padding: 10px; /* Add some padding for better spacing */
+  border-radius: 10px; /* Optional: rounded corners */
+  border: 1px solid var(--text-color); /* Use variable for border color */
+}
+
+.cardHolder:hover .descriptionContainer {
+  opacity: 1; /* Show the description on hover */
+}
+
+.description {
+  font-size: 1em; /* Adjust as needed for the description size */
+  color: var(--text-color); /* Ensure the description is visible */
+  padding: 0 10px; /* Optional: add some padding */
 }

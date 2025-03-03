@@ -134,9 +134,9 @@ import Canada from "../../assets/environment-canada-logo-partners.jpg"
 
 const experiences = [
   {
-    date: 'January 2025 - April 2025',
+    date: '01/2025 - 04/2025',
     title: 'Data Scientist',
-    company_name: 'Enviornment and Climate Change Canada',
+    company_name: 'ECCC',
     content: [
       'Incoming Winter 2025 Intern at Air Quality Team'
     ],
@@ -144,8 +144,8 @@ const experiences = [
     iconBg: '#fff',
   },
   {
-    date: 'September 2024 - December 2024',
-    title: 'AI Software Engineer (Contract)',
+    date: '09/2024 - 12/2024',
+    title: 'AI Data Sceintist',
     company_name: 'RemitBee',
     content: [
       'Lead the deployment of scalable AI/ML model training pipelines, enhancing efficiency and optimizing end-to-end workflows.'
@@ -154,7 +154,7 @@ const experiences = [
     iconBg: '#fff',
   },
   {
-    date: 'June 2024 - September 2024',
+    date: '06/2024 - 09/2024',
     title: 'AI Software Engineer',
     company_name: 'RemitBee',
     content: [
@@ -164,7 +164,7 @@ const experiences = [
     iconBg: '#fff',
   },
   {
-    date: 'Jan 2024 - June 2024',
+    date: '01/2024 - 06/2024',
     title: 'Data Engineer',
     company_name: 'Countable',
     content: [
@@ -181,7 +181,7 @@ const Experience = () => {
       <div className={styles.title}>
         <div className={styles.titlecontainer}>
           <h1 className={styles.largertitle}>Experience</h1>
-          <h3 className={styles.smallertitle}>Experience</h3>
+          <h3 className={styles.smallertitle}>Experience.</h3>
         </div>
       </div>
 
@@ -195,7 +195,11 @@ const Experience = () => {
           <tbody>
             {experiences.map((experience, index) => (
               <tr key={`experience-${index}`}>
-                <td>{experience.title} <br /> {experience.date}</td>
+                  <td className={styles.firstColumn}>
+                    <span className={styles.smallFont}>{experience.date} | {experience.company_name}</span><br />
+                    <span className={styles.bigFont}>{experience.title}</span>
+                  </td>
+         
                 <td>{experience.content}</td>
               </tr>
             ))}

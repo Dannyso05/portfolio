@@ -8,10 +8,14 @@
   --grad-color-dark: rgba(0, 0, 0, 0);
   --fadecolor-light: rgba(0, 0, 0, 0.1);
   --fadecolor-dark:rgba(255, 255, 255, 0.1);
+  --shadow-light: rgba(0, 0, 0, 0.7);
+  --shadow-dark:rgba(255, 255, 255, 0.7);
+  --lightbg-light: rgba(255, 255, 255, 0.7);
+  --lightbg-dark: rgba(0, 0, 0, 0.7);
 }
 
 .element {
-padding-top: 75px;
+padding-top: 100px;
 }
 
 .contcont {
@@ -35,6 +39,8 @@ margin-right: 20px;
   --text-color: var(--text-color-light);
   --grad-color: var(--grad-color-light);
   --fade-color: var(--fadecolor-light);
+  --shadow-color : var(--shadow-light);
+  --lightbg: var(--lightbg-light);
 }
 
 /* Dark theme styles */
@@ -43,6 +49,9 @@ margin-right: 20px;
   --text-color: var(--text-color-dark);
   --grad-color: var(--grad-color-dark);
   --fade-color: var(--fadecolor-dark);
+  --shadow-color : var(--shadow-dark);
+  --lightbg: var(--lightbg-dark);
+
 
 }
 
@@ -195,10 +204,6 @@ font-size: 13px;
 font-weight: 300;
 }
 
-.sectionTitle {
-margin-bottom: 30px;
-}
-
 .hover {
 cursor: pointer;
 }
@@ -208,12 +213,13 @@ cursor: pointer;
   height: 3px;
   background-color: rgba(114, 173, 232, 0.5); /* Dodger Blue with 50% opacity */
   margin: 100px auto;
-  margin-bottom: 0px;
 }
 
 .footer {
-  padding-top: 10px;
-  align-content: center;
+  text-align: center; /* Center the text */
+  margin-top: 50px; /* Add some space above the footer */
+  padding: 25px; /* Add padding for better spacing */
+  color: var(--text-color); /* Use the text color variable */
 }
 
 @media (width >= 800px) {

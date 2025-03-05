@@ -8,6 +8,12 @@ import Card from 'react-animated-3d-card';
 
 const projects = [
   {
+    title: "",
+    description: "",
+    image: "", // You can use a placeholder image if needed
+    url: "#", // No URL for dummy projects
+  },
+  {
     title: "UW scheduler",
     description: "Full-stack application that allows students to generate multiple schedules based on given restrictions. Still under development.",
     image: pj1,
@@ -16,7 +22,7 @@ const projects = [
   {
     title: "Job Scraper",
     description: "Python web scraper web application to aggregate job postings from several websites.",
-    image: pj2,
+    image: pj3,
     url: "https://github.com/Dannyso05/Python-webscraper",
   },
   {
@@ -28,9 +34,11 @@ const projects = [
   {
     title: "Image Resize App",
     description: "Basic JavaScript program to change image file size.",
-    image: pj3,
+    image: pj2,
     url: "https://github.com/Dannyso05/File-size-app",
   },
+  // Dummy projects
+ 
 ];
 
 function Projects() {
@@ -66,12 +74,12 @@ function Projects() {
     if (!isDragging) return;
     e.preventDefault();
     const x = e.pageX - carouselRef.current.offsetLeft;
-    const walk = (x - startX) * 2; // Adjust scroll speed
+    const walk = (x - startX) * 1.5; // Increase the multiplier for faster scrolling
     carouselRef.current.scrollLeft = scrollLeft - walk;
   };
 
   return (
-    <>
+    <section id="Projects" className={styles.projectContainer}>
       <div className={styles.titlecontainer}>
         <h1 className={styles.largertitle}>Projects</h1>
         <h3 className={styles.smallertitle}>Projects.</h3>
@@ -85,29 +93,42 @@ function Projects() {
         onMouseMove={handleMouseMove}
       >
         <div className={styles.carousel}>
-          {projects.map((project, index) => (
-            <div className={styles.cardHolder} key={index}>
-              <Card
-                style={{
-                  backgroundColor: 'transparent',
-                  width: '300px',
-                  height: '400px',
-                  cursor: 'pointer',
-                  position: 'relative',
-                }}
-                onClick={() => window.open(project.url, '_blank')}
-              >
-                <img src={project.image} alt={project.title} className={styles.image} />
-              </Card>
-              <div className={styles.descriptionContainer}>
-                <h1 className={styles.title}>{project.title}</h1>
-                <p className={styles.description}>{project.description}</p>
+          {projects.map((project, index) => {
+            if (project.url === "#") {
+              return (
+                <div className={styles.cardHolder} key={index} style={{ visibility: 'hidden', height: '400px', width: '300px' }}>
+                  {/* Invisible card for unselectable project */}
+                </div>
+              );
+            }
+            return (
+              <div className={styles.cardHolder} key={index}>
+                <Card
+                  style={{
+                    backgroundColor: 'transparent',
+                    width: '300px',
+                    height: '400px',
+                    cursor: 'pointer',
+                    position: 'relative',
+                  }}
+                  onClick={() => window.open(project.url, '_blank')}
+                >
+                  {project.image ? (
+                    <img src={project.image} alt={project.title} className={styles.image} />
+                  ) : (
+                    <div className={styles.image} style={{ backgroundColor: '#e0e0e0' }}></div> // Placeholder for empty boxes
+                  )}
+                </Card>
+                <div className={styles.descriptionContainer}>
+                  <h1 className={styles.title}>{project.title || "Empty Project"}</h1>
+                  <p className={styles.description}>{project.description || "No description available."}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
-    </>
+    </section>
   );
 }
 

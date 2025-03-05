@@ -40,7 +40,6 @@ function App() {
       <section id="Contacts" className='element'>
         <Contacts/>
       </section>
-      <div className="section-divider"></div>
 
       <div className='footer'>@ 2025 Daniel Hyeongseok Song</div>
       <Nav/>
